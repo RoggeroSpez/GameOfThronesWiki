@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import HouseCard from '../../Components/HouseCard';
 
-const Houses = () => {
+const House = () => {
   const [house, setHouse] = useState([]);
   const [nextPageUrl, setNextPageUrl] = useState(null);
 
@@ -45,7 +45,7 @@ const Houses = () => {
   );
 };
 
-export default Houses;
+export default House;
 
 //        int Id { get; set; }
 //        string Name { get; set; }

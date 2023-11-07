@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/navBar';
 import Home from './Pages/Home/Home';
 import Characters from './Pages/Characters/Characters';
-import Houses from './Pages/Houses/Houses';
+import Houses from './Pages/House/House';
 import gameOfThronesAudio from './Media/gameofthrones.mp3';
 
 function App() {
