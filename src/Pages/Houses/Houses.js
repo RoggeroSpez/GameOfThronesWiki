@@ -1,23 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import NavBar from '../../Components/navigationBar/navBar';
+import { Link } from 'react-router-dom';
+import './Characters.css';
+import HouseCard from './HouseCard';
 
 const Houses = () => {
-  const [houses, setHouses] = useState([]);
+  const [house, setHouse] = useState([]);
   const [nextPageUrl, setNextPageUrl] = useState(null);
 
   useEffect(() => {
-    const fetchHouses = async () => {
-      const response = await axios.get('https://anapioficeandfire.com/api/houses?page=1&pageSize=10');
-      setHouses(response.data);
+    const fetchHouse = async () => {
+      const response = await axios.get(
+        `https://anapioficeandfire.com/api/houses?page=1&pageSize=10`
+      );
+      setHouse(response.data);
     };
 
-    fetchHouses();
+    fetchHouse();
   }, []);
-    const handleNextClick = () => {
+
+  const handleNextClick = () => {
     axios.get(nextPageUrl)
       .then(response => {
-        setHouses(Houses.concat(response.data));
+        setHouse(house.concat(response.data));
         setNextPageUrl(response.headers.link.split(',').find(link => link.includes('rel="next"')).split(';')[0].replace('<', '').replace('>', ''));
       })
       .catch(error => {
@@ -26,15 +31,18 @@ const Houses = () => {
   };
 
   return (
-    <ul>
-      <NavBar/>
-      {houses.map(house => (
-        <li key={house.url}>
-          {house.name}
-        </li>
-      ))}
-      <button onClick={handleNextClick}>Next</button>
-    </ul>
+    <div className="house">
+      <h1>Houses</h1>
+      <div className="house">
+        {house.map((house) => (
+          <Link to={`/house/${house.id}`} key={house.id}>
+            <HouseCard house={house}   key={house.id}  House={house} />
+          </Link>
+        ))}
+        
+<button onClick={handleNextClick}>Next</button>
+      </div>
+    </div>
   );
 };
 
