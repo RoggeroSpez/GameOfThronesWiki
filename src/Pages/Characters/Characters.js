@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import CharacterCard from '../../Components/CharacterCard';
 import axios from 'axios';
-import NavBar from '../../Components/navigationBar/navBar';
+import { Link } from 'react-router-dom';
+import './Characters.css';
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [nextPageUrl, setNextPageUrl] = useState(null);
 
   useEffect(() => {
-    axios.get('https://www.anapioficeandfire.com/api/characters?page=1&pageSize=10')
-      .then(response => {
-        setCharacters(response.data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    const fetchCharacters = async () => {
+      const response = await axios.get(
+        `https://anapioficeandfire.com/api/characters?page=1&pageSize=10`
+      );
+      setCharacters(response.data);
+    };
+
+    fetchCharacters();
   }, []);
 
   const handleNextClick = () => {
@@ -28,23 +31,22 @@ const Characters = () => {
   };
 
   return (
-    <div>
-        <NavBar/>
+    <div className="characters">
       <h1>Characters</h1>
-      <ul>
-        {characters.map(character => (
-          <li key={character.url}>
-            <a href={character.url}>{character.name}</a>
-          </li>
+      <div className="character-list">
+        {characters.map((character) => (
+          <Link to={`/characters/${character.id}`} key={character.id}>
+            <CharacterCard character={character} />
+          </Link>
         ))}
-      </ul>
-      <button onClick={handleNextClick}>Next</button>
+        
+<button onClick={handleNextClick}>Next</button>
+      </div>
     </div>
   );
 };
 
 export default Characters;
-
 //get https://www.anapioficeandfire.com/api/characters/{id or name}/
 //
 //[
