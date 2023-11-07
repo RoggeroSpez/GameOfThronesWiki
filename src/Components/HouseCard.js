@@ -6,13 +6,13 @@ const HouseCard = ({ house }) => {
     <div className="house-card">
         <h2>{house.name}</h2>
         <p>Founded: {house.founded}</p>
-        <p>Fonder: {house.founder.id('')}</p>
+        <p>Fonder: {house.fonder}</p>
+        <p>Current Lord: {house.currentLord}</p>
+        <p>Heir: {house.heir}</p>
         <p>Titles: {house.titles.join(', ')}</p>
-        <p>Current Lord: {house.currentLord.id('')}</p>
-        <p>Heir: {house.heir.id('')}</p>
         <p>Words: {house.words}</p>
         <p>Seats: {house.seats.join(', ')}</p>
-        <p>Sworn Members {house.swornMembers.join(',')}</p>
+        <p>Sworn Members {house.swornMembers}</p>
     </div>
   );
 };
