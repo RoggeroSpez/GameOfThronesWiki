@@ -10,7 +10,7 @@ const House = () => {
   useEffect(() => {
     const fetchHouse = async () => {
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/houses?page=1&pageSize=1`
+        `https://anapioficeandfire.com/api/houses?page=1&pageSize=50`
       );
       setHouse(response.data);
     };
@@ -31,7 +31,7 @@ const House = () => {
 
   return (
     <div className="houses">
-      <h1>Housess</h1>
+      <h1>Houses</h1>
       <div className="houses-list">
         {house.map((house) => (
           <Link to={`/houses/${house.id}`} key={house.id}>

@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/navBar';
 import Home from './Pages/Home/Home';
 import Characters from './Pages/Characters/Characters';
-import Houses from './Pages/House/House';
+import House from './Pages/Houses/House';
 import gameOfThronesAudio from './Media/gameofthrones.mp3';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Characters" element={<Characters />} />
-            <Route path="/Houses" element={<Houses />} />
+            <Route path="/House" element={<House />} />
           </Routes>
         </div>
         </body>
