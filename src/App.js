@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Characters from './Pages/Characters';
-import Houses from './Pages/Houses';
-import Home from './Pages/Home';
 import NavBar from './components/NavBar';
+import Home from './components/Home';
+import Characters from './components/Characters';
+import Houses from './components/Houses';
 import gameOfThronesAudio from './Media/gameofthrones.mp3';
 
 function App() {
