@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import CharacterStats from '../../Components/CharacterStats';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Characters.css';
 
 const Character = () => {
   const [character, setCharacter] = useState([]);
