@@ -24,7 +24,7 @@ function App() {
         <div className="audio-container">
           <audio controls autoPlay>
             <source src={gameOfThronesAudio} type="audio/mp3" />
-            Lord Tyron has gone to go get the minstrals.
+            Lord Tyrion Lannister has gone to go get the minstrals.
           </audio>
         </div>
       </div>
