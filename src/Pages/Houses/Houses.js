@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './Characters.css';
 import HouseCard from './HouseCard';
 
 const Houses = () => {
@@ -11,7 +10,7 @@ const Houses = () => {
   useEffect(() => {
     const fetchHouse = async () => {
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/houses?page=1&pageSize=10`
+        `https://anapioficeandfire.com/api/houses?page=1&pageSize=1`
       );
       setHouse(response.data);
     };

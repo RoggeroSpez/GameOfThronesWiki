@@ -1,9 +1,6 @@
-import NavBar from "../../components/navBar";
-
 const Home = () => {
   return (
     <>
-    <NavBar/>
     <section>
       <section>
         <h1>Welcome to the world created by George R.R. Martin</h1>
