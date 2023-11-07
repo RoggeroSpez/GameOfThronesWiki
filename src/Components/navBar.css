@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
 
-.NavBar {
+.navBar {
     display: flex;
     justify-content: space-evenly;
     font-family: 'Cinzel Decorative', serif;

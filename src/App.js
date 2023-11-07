@@ -14,6 +14,7 @@ function App() {
         <header>
           <NavBar />
         </header>
+        <body>
         <div className="content-container">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -21,12 +22,15 @@ function App() {
             <Route path="/Houses" element={<Houses />} />
           </Routes>
         </div>
+        </body>
+        <footer>
         <div className="audio-container">
           <audio controls autoPlay>
             <source src={gameOfThronesAudio} type="audio/mp3" />
             Lord Tyrion Lannister has gone to go get the minstrals.
           </audio>
         </div>
+        </footer>
       </div>
     </BrowserRouter>
   );

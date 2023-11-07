@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-//import HouseCard from './Components/HouseCard'
+import HouseCard from '../../Components/HouseCard';
 
 const Houses = () => {
   const [house, setHouse] = useState([]);
@@ -30,11 +30,12 @@ const Houses = () => {
   };
 
   return (
-    <div className="house">
-      <h1>Houses</h1>
-      <div className="house">
+    <div className="houses">
+      <h1>Housess</h1>
+      <div className="houses-list">
         {house.map((house) => (
-          <Link to={`/house/${house.id}`} key={house.id}>
+          <Link to={`/houses/${house.id}`} key={house.id}>
+            <HouseCard house={house} />
           </Link>
         ))}
         

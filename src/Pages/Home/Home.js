@@ -13,8 +13,7 @@ const Home = () => {
         <h2>Learn about the Houses</h2>
         <p>Within Westeros and Essos there are many factions from Nobility to Royalty</p>
       </section>
-      </section>
-      <img src="./MapofWestros.jpg" alt="Map of Westros"/> 
+    </section>
     </>
   );
 }

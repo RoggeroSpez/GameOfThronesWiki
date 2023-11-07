@@ -6,7 +6,6 @@ import './HouseCard.css';
 const HouseCard = ({ house }) => {
   return (
     <div className="house-card">
-      <Link to={`/houses/${house.id}`}>
         <h2>{house.name}</h2>
         <p>Titles: {house.titles.join(', ')}</p>
         {house.currentLord && (
@@ -20,7 +19,6 @@ const HouseCard = ({ house }) => {
             Sworn Members: {house.swornMembers.map((member) => member.name).join(', ')}
           </p>
         )}
-      </Link>
     </div>
   );
 };
