@@ -34,7 +34,7 @@ const Character = () => {
       <h1>Character</h1>
       <div className="character">
         {character.map((character) => (
-          <Link to={`/characters/${character.id}`} key={character.id}>
+          <Link to={`/character/${character.id}`} key={character.id}>
             <CharacterStats key={character.id}  character={character} />
           </Link>
         ))}

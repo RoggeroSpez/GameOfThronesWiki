@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import HouseCard from './Components/HouseCard'
+//import HouseCard from './Components/HouseCard'
 
 const Houses = () => {
   const [house, setHouse] = useState([]);
@@ -35,7 +35,6 @@ const Houses = () => {
       <div className="house">
         {house.map((house) => (
           <Link to={`/house/${house.id}`} key={house.id}>
-            <HouseCard house={house}   key={house.id}  House={house} />
           </Link>
         ))}
         
