@@ -24,13 +24,6 @@ function App() {
         </div>
         </body>
         <footer>
-          <div className='Img'>
-            <img src='MapofWestross' width='100%' height='100%' 
-            style={{objectFit: 'cover'}}
-            className="App-logo" 
-            alt="Map of Westross" 
-            title="Map of Westross" /> alt="Map of Westros" /f
-          </div>
         <div className="audio-container">
           <audio controls autoPlay>
             <source src={gameOfThronesAudio} type="audio/mp3" />
