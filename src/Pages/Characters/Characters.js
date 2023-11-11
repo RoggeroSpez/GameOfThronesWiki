@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
-  const [nextPageUrl, setNextPageUrl] = useState(null);
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -18,17 +17,6 @@ const Characters = () => {
     fetchCharacters();
   }, []);
 
-  const handleNextClick = () => {
-    axios.get(nextPageUrl)
-      .then(response => {
-        setCharacters(characters.concat(response.data));
-        setNextPageUrl(response.headers.link.split(',').find(link => link.includes('rel="next"')).split(';')[0].replace('<', '').replace('>', ''));
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
-
   return (
     <div className="characters">
       <h1>Characters</h1>
@@ -38,8 +26,6 @@ const Characters = () => {
             <CharacterCard character={character} />
           </Link>
         ))}
-        
-<button onClick={handleNextClick}>Next</button>
       </div>
     </div>
   );
