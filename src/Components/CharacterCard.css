@@ -19,12 +19,3 @@
     display: block;
     margin: 10px auto;
   }
-  
-  .Primary{
-    text-align: left;
-    text-wrap:balance;
-  }
-  .Secondary{
-    text-align: right;
-    text-wrap:balance;
-  }
