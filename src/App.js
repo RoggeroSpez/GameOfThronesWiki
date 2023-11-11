@@ -6,7 +6,9 @@ import Home from './Pages/Home/Home';
 import Characters from './Pages/Characters/Characters';
 import House from './Pages/Houses/House';
 import gameOfThronesAudio from './Media/gameofthrones.mp3';
-import MapofWestros from './Media/MapofWestros.jpg';
+import MapofWestross from './Media/MapofWestross.jpg';
+
+
 
 
 function App() {
@@ -27,7 +29,11 @@ function App() {
         </body>
         <footer>
           <div className='Img'>
-            <img src={MapofWestros} alt="Map of Westros" />f
+            <img src='MapofWestross' width='100%' height='100%' 
+            style={{objectFit: 'cover'}}
+            className="App-logo" 
+            alt="Map of Westross" 
+            title="Map of Westross" /> alt="Map of Westros" /f
           </div>
         <div className="audio-container">
           <audio controls autoPlay>
