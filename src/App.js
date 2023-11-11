@@ -6,6 +6,8 @@ import Home from './Pages/Home/Home';
 import Characters from './Pages/Characters/Characters';
 import House from './Pages/Houses/House';
 import gameOfThronesAudio from './Media/gameofthrones.mp3';
+import MapofWestros from './Media/MapofWestros.jpg';
+
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
             <Route path="/Characters" element={  <Characters />} />
             <Route path="/House" element={<  House />} />
           </Routes>
+        </div>
+        <div className='Map'>
+          <MapofWestros/>
         </div>
         </body>
         <footer>
