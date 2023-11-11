@@ -21,7 +21,6 @@ const HouseCard = ({ house }) => {
         <p>Heir: {house.heir}</p>
         <p>Seats: {house.seats.join(', ')}</p>
         <p>SwornMembers: {swornMembers(house.swornMembers).join(', ')}</p>
-        <p>AncestralWeapons: {house.ancestralWeapons.join(', ')}</p>
         </section>
     </div>
   );

@@ -24,11 +24,11 @@ function App() {
             <Route path="/House" element={<  House />} />
           </Routes>
         </div>
-        <div className='Map'>
-          <MapofWestros/>
-        </div>
         </body>
         <footer>
+          <div className='Img'>
+            <img src={MapofWestros} alt="Map of Westros" />f
+          </div>
         <div className="audio-container">
           <audio controls autoPlay>
             <source src={gameOfThronesAudio} type="audio/mp3" />
