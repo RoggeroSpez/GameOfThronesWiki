@@ -17,9 +17,9 @@ function App() {
         <body>
         <div className="content-container">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Characters" element={<Characters />} />
-            <Route path="/House" element={<House />} />
+            <Route path="/" element={<  Home />} />
+            <Route path="/Characters" element={  <Characters />} />
+            <Route path="/House" element={<  House />} />
           </Routes>
         </div>
         </body>
