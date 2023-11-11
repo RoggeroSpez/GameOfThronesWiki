@@ -1,6 +1,6 @@
 /* CharacterCard.css */
 .character-card {
-    background-color: #fff;
+    background-color: #f84b4b;
     border: 1px solid #ccc;
     padding: 20px;
     margin: 10px;
@@ -20,3 +20,9 @@
     margin: 10px auto;
   }
   
+  .Primary{
+    text-align: left;
+  }
+  .Secondary{
+    text-align: right;
+  }
