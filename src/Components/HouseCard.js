@@ -10,14 +10,19 @@ const HouseCard = ({ house }) => {
   return (
     <div className="house-card">
         <h2>{house.name}</h2>
+        <section className='Primary'>
         <p>Founded: {house.founded}</p>
         <p>Fonder: {house.fonder}</p>
         <p>Words: {house.words}</p>
         <p>Titles: {house.titles.join(', ')}</p>
+        </section>
+        <section className='Secondary'>
         <p>CurrentLord: {house.currentLord}</p>
         <p>Heir: {house.heir}</p>
         <p>Seats: {house.seats.join(', ')}</p>
         <p>SwornMembers: {swornMembers(house.swornMembers).join(', ')}</p>
+        <p>AncestralWeapons: {house.ancestralWeapons.join(', ')}</p>
+        </section>
     </div>
   );
 };

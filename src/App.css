@@ -9,11 +9,12 @@ header {
 }
 
 body {
-    background-color: red;
+    background-color: snow;
 }
 
 footer {
     display: flex;
-    justify-content: center, column;
-    align-content: center, column;
+    justify-content: center;
+    align-content: center;
+    background-color: red;
 }
