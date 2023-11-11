@@ -22,7 +22,9 @@
   
   .Primary{
     text-align: left;
+    text-wrap:balance;
   }
   .Secondary{
     text-align: right;
+    text-wrap:balance;
   }

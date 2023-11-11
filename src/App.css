@@ -9,12 +9,12 @@ header {
 }
 
 body {
-    background-color: snow;
+    background-color: firebrick;
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: red;
+    background-color: darkred;
 }
