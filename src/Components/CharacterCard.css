@@ -6,6 +6,7 @@
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     background-color: snow;
+    transform: scale(1.02);
   }
   
   .character-name {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CharacterCard from '../../Components/CharacterCard';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
@@ -22,9 +21,7 @@ const Characters = () => {
       <h1>Characters</h1>
       <div className="character-list">
         {characters.map((character) => (
-          <Link to={`/characters/${character.id}`} key={character.id}>
             <CharacterCard character={character} />
-          </Link>
         ))}
       </div>
     </div>
