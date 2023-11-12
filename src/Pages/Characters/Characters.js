@@ -5,13 +5,16 @@ import axios from 'axios';
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchCharacters = async () => {
+      setLoading(true);
       const response = await axios.get(
         `https://anapioficeandfire.com/api/characters?page=1&pageSize=50`
       );
-      setCharacters(response.data);
+      setCharacters((prevCharacter) => [...prevCharacter, ...response.data]);
+      setLoading(false);
     };
 
     fetchCharacters();
@@ -29,8 +32,11 @@ const Characters = () => {
             <CharacterCard character={character} />
         ))}
       </div>
-      <div>
+      <div className='loading'>
+      {loading && <p>Loading...</p>}
+      {!loading && (
         <button onClick={handleLoadMore}>Load More</button>
+      )}
       </div>
     </div>
   );

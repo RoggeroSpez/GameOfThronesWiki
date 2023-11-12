@@ -5,12 +5,15 @@ import HouseCard from '../../Components/HouseCard';
 const House = () => {
   const [house, setHouse] = useState([]);
   const [page, setPage] =useState(1);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const fetchHouse = async () => {
+      setLoading(true);
       const response = await axios.get(
         `https://anapioficeandfire.com/api/houses?page=1&pageSize=50`
       );
-      setHouse(response.data);
+      setHouse((prevHouse) => [...prevHouse, response.data]);
     };
 
     fetchHouse();
@@ -26,8 +29,11 @@ const handleLoadMore = () => {
             <HouseCard house={house} />
         ))}
       </div>
-      <div>
+      <div className='loading'>
+      {loading && <p>Loading...</p>}
+      {!loading && (
         <button onClick={handleLoadMore}>Load More</button>
+      )}
       </div>
     </div>
   );
