@@ -2,8 +2,8 @@
 
 .navBar {
     display: flex;
-    justify-content: center, space-evenly;
-    align-content: center, space-evenly;
+    justify-content: center;
+    align-content: center;
     font-family: 'Cinzel Decorative', serif;
     font-size: 80%;
 }
