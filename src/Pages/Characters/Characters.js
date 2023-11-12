@@ -9,7 +9,7 @@ const Characters = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/characters?page=1&pageSize=10`
+        `https://anapioficeandfire.com/api/characters?page=1&pageSize=50`
       );
       setCharacters(response.data);
     };

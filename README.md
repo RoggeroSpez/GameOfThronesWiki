@@ -22,4 +22,4 @@ Welcome to the Springboard Capstone Project, this project is part to the Guided 
 //- Page  based on 1 as current value by default
 //- Page sizes are default value of 10 on return
 
-I used multiple tools, I used the API as well as the Git portion that it is producded by, I used bard to help translate items I was having problems with. I talked to my mentor about certain aspects I was having problems with. I also talk to some of my peers for support. I used Postman to help test the responses I needed for my project from the API. I used VSCode as well as numerous Extensions it has IE ESLint and its React extentions.
+//- I used multiple tools, I used the API as well as the Git portion that it is producded by, I used bard to help translate items I was having problems with. I talked to my mentor  about certain aspects I was having problems with. I also talk to some of my peers for support. I used Postman to help test the responses I needed for my project from the API. I used VSCode as well as numerous Extensions it has IE ESLint and its React extentions.

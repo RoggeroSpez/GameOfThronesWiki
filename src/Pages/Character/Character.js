@@ -3,33 +3,32 @@ import CharacterStats from '../../Components/CharacterStats';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const Character = () => {
-  const [character, setCharacter] = useState([]);
+const Characters = () => {
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    const fetchCharacter = async () => {
+    const fetchCharacters = async () => {
       const response = await axios.get(
         `https://anapioficeandfire.com/api/characters?page=1&pageSize=1`
       );
-      setCharacter(response.data);
+      setCharacters(response.data);
     };
 
-    fetchCharacter();
+    fetchCharacters();
   }, []);
 
   return (
-    <div className="character">
+    <div className="characters">
       <h1>Character</h1>
-      <div className="character">
-        {character.map((character) => (
+      <div className="character-list">
+        {characters.map((character) => (
           <Link to={`/character/${character.id}`} key={character.id}>
-            <CharacterStats key={character.id}  character={character} />
+            <CharacterStats character={character} />
           </Link>
         ))}
-        
       </div>
     </div>
   );
 };
 
-export default Character;
+export default Characters;
