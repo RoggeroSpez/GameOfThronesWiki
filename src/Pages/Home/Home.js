@@ -1,7 +1,9 @@
+import 'Home.css';
+
 const Home = () => {
   return (
     <>
-    <section>
+    <section className="Home">
       <section>
         <h1>Welcome to the world created by George R.R. Martin</h1>
       </section>

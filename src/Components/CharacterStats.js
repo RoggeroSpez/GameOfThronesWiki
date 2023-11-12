@@ -1,7 +1,7 @@
 import React from 'react';
 import './CharacterCard.css';
 
-const CharacterCard = ({ character }) => {
+const CharacterStats = ({ character }) => {
   return (
     <div className="character-card">
         <h2>{character.name || character.aliases[0]}</h2>
@@ -18,4 +18,4 @@ const CharacterCard = ({ character }) => {
   );
 };
 
-export default CharacterCard;
+export default CharacterStats;
