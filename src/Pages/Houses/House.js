@@ -4,7 +4,7 @@ import HouseCard from '../../Components/HouseCard';
 
 const House = () => {
   const [house, setHouse] = useState([]);
-  
+  const [page, setPage] =useState(1);
   useEffect(() => {
     const fetchHouse = async () => {
       const response = await axios.get(
@@ -14,8 +14,10 @@ const House = () => {
     };
 
     fetchHouse();
-  }, []);
-
+  }, [page]);
+const handleLoadMore = () => {
+  setPage(page + 1);
+}
   return (
     <div className="houses">
       <h1>Houses</h1>
@@ -23,6 +25,9 @@ const House = () => {
         {house.map((house) => (
             <HouseCard house={house} />
         ))}
+      </div>
+      <div>
+        <button onClick={handleLoadMore}>Load More</button>
       </div>
     </div>
   );

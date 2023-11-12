@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const Characters = () => {
   const [characters, setCharacters] = useState([]);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -14,7 +15,11 @@ const Characters = () => {
     };
 
     fetchCharacters();
-  }, []);
+  }, [page]);
+
+ const handleLoadMore = () => {
+  setPage(page + 1);
+ }
 
   return (
     <div className="characters">
@@ -23,6 +28,9 @@ const Characters = () => {
         {characters.map((character) => (
             <CharacterCard character={character} />
         ))}
+      </div>
+      <div>
+        <button onClick={handleLoadMore}>Load More</button>
       </div>
     </div>
   );
