@@ -10,12 +10,10 @@ const HouseCard = ({ house }) => {
   return (
     <div className="house-card">
         <h2>{house.name}</h2>
-        <p>Founded: {house.founded}</p>
-        <p>Fonder: {house.fonder}</p>
+        <p>Founded: {house.founded} by Fonder: {house.fonder}</p>
         <p>Words: {house.words}</p>
         <p>Titles: {house.titles.join(', ')}</p>
-        <p>CurrentLord: {house.currentLord}</p>
-        <p>Heir: {house.heir}</p>
+        <p>CurrentLord: {house.currentLord} and Heir: {house.heir}</p>
         <p>Seats: {house.seats.join(', ')}</p>
         <p>SwornMembers: {swornMembers(house.swornMembers).join(', ')}</p>
     </div>
