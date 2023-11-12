@@ -7,14 +7,14 @@ const Character = () => {
   const [character, setCharacter] = useState([]);
 
   useEffect(() => {
-    const fetchCharacters = async () => {
+    const fetchCharacter = async () => {
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/character?page=1&pageSize=1`
+        `https://anapioficeandfire.com/api/characters?page=1&pageSize=1`
       );
       setCharacter(response.data);
     };
 
-    fetchCharacters();
+    fetchCharacter();
   }, []);
 
   return (
