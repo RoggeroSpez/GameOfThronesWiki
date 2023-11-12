@@ -9,7 +9,7 @@ const Character = () => {
   useEffect(() => {
     const fetchCharacters = async () => {
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/characters?page=1&pageSize=1`
+        `https://anapioficeandfire.com/api/character?page=1&pageSize=1`
       );
       setCharacter(response.data);
     };
@@ -18,7 +18,7 @@ const Character = () => {
   }, []);
 
   return (
-    <div className="characters">
+    <div className="character">
       <h1>Character</h1>
       <div className="character-list">
         {character.map((character) => (
