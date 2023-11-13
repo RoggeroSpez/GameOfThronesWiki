@@ -6,8 +6,8 @@ import "./navBar.css";
 const NavBar = () => (
     <nav className="navbar">
         <NavLink to="/"  className={({ isActive}) => (isActive ? "active" : undefined)}>Home</NavLink>
-        <NavLink to="/characters" className={({ isActive}) => (isActive ? "active" : undefined)}>Character</NavLink>
-        <NavLink to="/house" className={({ isActive}) => (isActive ? "active" : undefined)}>House</NavLink>
+        <NavLink to="/Characters" className={({ isActive}) => (isActive ? "active" : undefined)}>Characters</NavLink>
+        <NavLink to="/Houses" className={({ isActive}) => (isActive ? "active" : undefined)}>Houses</NavLink>
     </nav>
 )
 export default NavBar;

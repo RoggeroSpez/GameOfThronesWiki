@@ -2,34 +2,37 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import HouseCard from '../../Components/HouseCard';
 
-const House = () => {
-  const [house, setHouse] = useState([]);
-  const [page, setPage] =useState(1);
+function Houses() {
+  const [houses, setHouses] = useState([]);
+  const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchHouse = async () => {
+    const fetchHouses = async () => {
       setLoading(true);
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/houses?page=1&pageSize=50`
+        `https://anapioficeandfire.com/api/houses?page=${page}&pageSize=50`
       );
-      setHouse((prevHouse) => [...prevHouse, response.data]);
+      setHouses((prevHouses) => [...prevHouses, ...response.data]);
+      setLoading(false);
     };
 
-    fetchHouse();
+    fetchHouses();
   }, [page]);
-const handleLoadMore = () => {
-  setPage(page + 1);
-}
+
+  const handleLoadMore = () => {
+    setPage(page + 1);
+  };
+
   return (
     <div className="houses">
       <h1>Houses</h1>
-      <div className="houses-list">
-        {house.map((house) => (
+      <div className="house-list">
+        {houses.map((house) => (
             <HouseCard house={house} />
         ))}
       </div>
-      <div className='loading'>
+      <div className="loading">
       {loading && <p>Loading...</p>}
       {!loading && (
         <button onClick={handleLoadMore}>Load More</button>
@@ -37,10 +40,9 @@ const handleLoadMore = () => {
       </div>
     </div>
   );
-};
+}
 
-export default House;
-
+export default Houses;
 //        int Id { get; set; }
 //        string Name { get; set; }
 //        string CoatOfArms { get; set; }
