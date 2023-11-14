@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gameofthroneswikischoolproject/static/css/main.c6ded4ee.css",
+    "main.js": "/gameofthroneswikischoolproject/static/js/main.5ced411e.js",
+    "static/media/gameofthrones.mp3": "/gameofthroneswikischoolproject/static/media/gameofthrones.7f2c7c7262e63b22ae5c.mp3",
+    "static/media/MapofWesteros.jpg": "/gameofthroneswikischoolproject/static/media/MapofWesteros.3df4f8166e7e48818e2f.jpg",
+    "index.html": "/gameofthroneswikischoolproject/index.html",
+    "main.c6ded4ee.css.map": "/gameofthroneswikischoolproject/static/css/main.c6ded4ee.css.map",
+    "main.5ced411e.js.map": "/gameofthroneswikischoolproject/static/js/main.5ced411e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6ded4ee.css",
+    "static/js/main.5ced411e.js"
+  ]
+}
