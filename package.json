@@ -1,6 +1,6 @@
 {
-  "homepage": "http:RoggeroSpez.io/gameofthroneswiki",
-  "name": "gameofthroneswiki",
+  "homepage": "http:RoggeroSpez.io/GameOfThronesWiki",
+  "name": "GameOfThronesWiki",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
