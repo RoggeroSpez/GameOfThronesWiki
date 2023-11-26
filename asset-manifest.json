@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gameofthroneswiki/static/css/main.e1f157a1.css",
-    "main.js": "/gameofthroneswiki/static/js/main.ec97ad42.js",
-    "static/media/gameofthrones.mp3": "/gameofthroneswiki/static/media/gameofthrones.7f2c7c7262e63b22ae5c.mp3",
-    "static/media/MapofWesteros.jpg": "/gameofthroneswiki/static/media/MapofWesteros.3df4f8166e7e48818e2f.jpg",
-    "index.html": "/gameofthroneswiki/index.html",
-    "main.e1f157a1.css.map": "/gameofthroneswiki/static/css/main.e1f157a1.css.map",
-    "main.ec97ad42.js.map": "/gameofthroneswiki/static/js/main.ec97ad42.js.map"
+    "main.css": "/GameOfThronesWiki/static/css/main.cdfb4abf.css",
+    "main.js": "/GameOfThronesWiki/static/js/main.4eb5d8c7.js",
+    "static/media/gameofthrones.mp3": "/GameOfThronesWiki/static/media/gameofthrones.7f2c7c7262e63b22ae5c.mp3",
+    "static/media/MapofWesteros.jpg": "/GameOfThronesWiki/static/media/MapofWesteros.3df4f8166e7e48818e2f.jpg",
+    "index.html": "/GameOfThronesWiki/index.html",
+    "main.cdfb4abf.css.map": "/GameOfThronesWiki/static/css/main.cdfb4abf.css.map",
+    "main.4eb5d8c7.js.map": "/GameOfThronesWiki/static/js/main.4eb5d8c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1f157a1.css",
-    "static/js/main.ec97ad42.js"
+    "static/css/main.cdfb4abf.css",
+    "static/js/main.4eb5d8c7.js"
   ]
 }
